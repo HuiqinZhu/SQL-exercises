@@ -1,0 +1,69 @@
+SELECT * FROM Customers;
+SELECT CustomerName, City FROM Customers;
+
+SELECT DISTINCT Country FROM Customers;
+
+SELECT COUNT(DISTINCT Country) FROM Customers;
+
+SELECT Count(*) AS DistinctCountries
+FROM (SELECT DISTINCT Country FROM Customers);
+
+
+SELECT * FROM Customers
+WHERE Country='Britain';
+
+SELECT * FROM Customers
+WHERE CustomerID=2;
+
+SELECT * FROM Customers
+WHERE NOT Country='Mexico';
+
+SELECT * FROM Customers
+WHERE City='Berlin' OR City='München';
+
+SELECT * FROM Customers
+WHERE Country='Germany' OR Country='Spain';
+
+SELECT * FROM Customers
+WHERE Country='Germany' AND (City='Tokyo' OR City='München');
+
+SELECT * FROM Customers
+WHERE NOT Country='Germany' AND NOT Country='USA';
+
+SELECT * FROM Customers
+ORDER BY Country;
+
+SELECT * FROM Customers
+ORDER BY Country, CustomerName;
+
+SELECT * FROM Customers
+ORDER BY Country DESC;
+
+SELECT * FROM Customers
+ORDER BY Country ASC, CustomerName DESC;
+
+
+
+
+INSERT INTO Customers (CustomerName, City, Country)
+VALUES ('Cardinal', 'Stavanger', 'Norway');
+
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NULL;
+
+SELECT CustomerName, ContactName, Address
+FROM Customers
+WHERE Address IS NOT NULL;
+
+UPDATE Customers
+SET ContactName = 'Huiqin Zhu', City= 'Tokyo'
+WHERE CustomerID = 1;
+
+
+
+--delete all:
+DELETE FROM Customers WHERE CustomerName='Alfreds Futterkiste';
+
+
+DELETE FROM Customers;
