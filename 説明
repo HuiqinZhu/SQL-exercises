@@ -1,0 +1,8 @@
+【学習項目】
+select, insert, delete, like, group by, order by,
+min/max, between, wildcard, and/or/not, count/avg/sum, 
+update, any/all, join, primary key, foreign key, null values,
+create/drop database, create/drop table, backup, alter tableなど
+【学習資源】
+ウェブ技術オンライン学習サイトW3Schools（全56回）
+（https://www.w3schools.com/sql/default.asp）
